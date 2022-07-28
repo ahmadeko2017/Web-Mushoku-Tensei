@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer {
+    display:block;
+}
+
+.container-product {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-checkbox {
+    display: flex;
+    padding: 10px;
+}
+
+.container-checkbox input {
+    height: 20px;
+}
+
+.container-checkbox p {
+    position: relative;
+    transform: translateX(10px);
+}
+
+.container-product .product {
+    display:flex;
+}
+
+.container-product .product .container {
+    padding-right: 5vw;
+}
+
+.container-feature ul {
+    display: flex;
+}
+
+.container-social {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+
+.container-social ul {
+    display: flex;
+}

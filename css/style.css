@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.header-color {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(136, 102, 38);
+    z-index: 1;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-navbar {
+    z-index: 2;
+}
+
+.logo-navbar a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 150%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 60%;
+    justify-content: space-evenly;
+    z-index: 5;
+}
+
+nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    line-height: 50px;
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    display: flex;
+    background-color: rgba(255, 201, 100, 0.5);
+    transition: all .5s;
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 4;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.menu input {
+    position: absolute;
+    width: 30px;
+    height: 30px ;
+    z-index: 10;
+    opacity: 0;
+}
+
+.menu span {
+    width: 30px;
+    height: 3px;
+    background-color: aliceblue;
+    border-radius: 3px;
+    position: relative;
+}
+
+.menu span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(1px,-2px);
+    transition: all .5s;
+}
+
+.menu span:nth-child(4) {
+    transform-origin: 0 0;
+}
+
+.menu input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-2px, 2px);
+    transition: all .5s;
+}
+
+.menu span:nth-child(3) {
+    transform-origin: 0 0;
+}
+
+.menu input:checked ~ span:nth-child(3) { 
+    opacity: 0;
+    transition: all .5s;
+}
+
+main {
+    width: auto;
+}
+
+.display {
+    display: flex;
+    background-image: url("../img/mushoku1.jpg");
+    background-size: cover;
+    justify-content: space-around;
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    height: 100vh;
+
+}
+
+.display .foto {
+    display: flex;
+    width: 40%;
+    padding-bottom: 5vw;
+    justify-content: space-around;
+    align-items: center;
+    transform: scale(.9);
+    transition: all .5s;
+    z-index: 0;
+}
+
+.display .foto:hover {
+    transform: scale(1);
+    transition: all .5s;
+    z-index: 0;
+}
+
+.display .foto img {
+    height: 500px;
+    transition: all .5s;
+}
+
+.display .deskripsi {
+    display: inline-block;
+    padding: 5vw;
+    color: rgb(255, 254, 254);
+    background-color: rgb(102, 66, 0, 0.5);
+    text-shadow: 1px 1px 9px rgb(253, 149, 112);
+    font-family: sans-serif;
+    width: 60%;
+    align-items: center;
+    margin: 50px;
+    border-radius: 1pc;
+}
+
+.display .deskripsi h1 {
+    font-size: 6vw;
+    transition: ease-in .5s;
+}
+
+.display .deskripsi p {
+    font-size: 3vh;
+    transition: ease-in .5s;
+    text-align: justify;
+}
+
+.container-audio {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    align-items: center;
+    justify-content: center;
+}
+
+audio {
+    opacity: 1;
+}
+
+audio:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 960px) {
+    .display .foto img {
+        height: 80vmin;
+        transition: all .5s;
+    }
+
+    .display .deskripsi {
+        margin: 6vmin;
+        padding: 6vmin;
+    }
+    .display .deskripsi h1 {
+        font-size:6vmin;
+        transition: ease-in .5s;
+    }
+    
+    .display .deskripsi p {
+        font-size: 3vmin;
+        transition: ease-in .5s;
+        text-align: justify;
+    }
+
+    audio {
+        transform: scale(.8);
+    }
+
+    .container-audio {
+        opacity: .5;
+        bottom: 0;
+    }
+
+    .container-audio:hover {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 45%;
+        transition: all .5s;
+    }
+    .display .deskripsi {
+        margin: 25px;
+        padding: 30px;
+    }
+    .display .deskripsi h1 {
+        font-size:6vw;
+        transition: ease-in .5s;
+    }
+    
+    .display .deskripsi p {
+        font-size: 3vw;
+        transition: ease-in .5s;
+        text-align: justify;
+    }
+
+    .display .foto img {
+        height: 400px;
+        transition: all .5s;
+    }
+
+    .container-social ul li a {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        overflow: hidden;
+    }
+
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        width: 100%;
+        background-color: rgba(253, 253, 253, 0);
+        transform: translateY(-100%);
+        transition: ease .5s;
+        z-index: 0;
+    }
+
+    nav ul.slide {
+        transform: translateY(0);
+        background-color: rgb(117, 94, 51, .5);
+    }
+
+    .nav ul li a{
+        align-items: right;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+
+    .display {
+        display: block;
+        height: 100vh;
+    }
+
+    .display .foto {
+        width: 100%;
+        height: 60vh;
+        transition: all .5s;
+        align-items: center;
+
+    }
+
+    .display .foto  img {
+        height: 80%;
+    }
+
+    .display .foto  img:hover {
+        height: 100%;
+    }
+
+    .display .deskripsi {
+        width: 100%;
+        height: 40vh;
+        margin: 0;
+        border-radius: 0;
+        transition: all .5s;
+        padding: 4vw;
+    }
+
+    .display .deskripsi h1 {
+        font-size: 6vw;
+        transition: ease-in .5s;
+    }
+    
+    .display .deskripsi p {
+        font-size:3.5vw;
+        transition: ease-in .5s;
+        text-align: justify;
+    }
+
+    audio {
+        display: flex;
+        transform: scale(.7);
+    }
+
+    .container-audio {
+        bottom: 35vh;
+        opacity: .5;
+    }
+
+    .container-audio:hover {
+        bottom: 35vh;
+        opacity: 1;
+    }
+}

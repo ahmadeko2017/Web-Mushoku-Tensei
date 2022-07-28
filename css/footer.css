@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fcfcfc;
+}
+
+
+/*ini untuk mengatur ukuran footer*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: 10wh;
+    font-family: "Open Sans";
+
+    color: #fcfcfc;
+}
+
+.container-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer a, footer p,footer li {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+/*ini untuk mengatur posisi teks*/
+
+.footer-contents {
+    display: flex;
+    align-items:center;
+    justify-content: left;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+/*ini untuk mengatur teks diatas icon*/
+
+.footer-contents h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+
+/*ini untuk mengatur teks dalam p*/
+
+.footer-contents p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+
+/*ini untuk mengatur posisi icon*/
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+
+/*ini untuk mengatur batas icon*/
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i {
+    font-size: 2.1rem;
+}
+
+.socials a:hover {
+    color: rgb(0, 255, 242);
+}
+
+.socials a span:hover {
+    color: rgb(255, 94, 0);
+}
+
+
+/*untuk mengatur teks dibawah icon*/
+
+.footer-bottom {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 10px;
+    text-decoration: capitalize;
+    text-align: center;
+}
+
+.footer-bottom p span {
+    text-transform: lowercase;
+}
+
+.footer-bottom {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200px;
+}
+
+.container-social {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-social {
+    font-size: .8rem;
+}
+
+.container-social ul {
+    display: flex;
+    opacity: .4;
+}
+
+.container-social ul li {
+    padding-left: 20px;
+}
+
+.container-social ul li a {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 768px) {
+    .container-social ul li a {
+        transform: scale(1);
+    }
+}
